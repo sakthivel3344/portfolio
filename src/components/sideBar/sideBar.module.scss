@@ -1,0 +1,104 @@
+@import "../../styles/index.scss";
+
+.SideBar {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    // background-color: rgba($color: $primary-color, $alpha: 0.1);
+    padding: 0 1rem;
+
+    &_header {
+        width: 100%;
+        display: flex;
+        height: fit-content;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 0.5rem;
+        &_content {
+            display: flex;
+            flex-direction: column;
+            font-family: $primary-font;
+            gap: 0.3rem;
+        }
+    }
+    .profile_img {
+        border-radius: 50%;
+        border: 2px solid $primary-color;
+        height: 5rem;
+        width: 5rem;
+        // visibility: hidden;
+    }
+
+    &_content {
+        &_list {
+            &_wrapper {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            &_item {
+                font-family: $primary-font;
+                padding: 0.7rem 0.7rem;
+                cursor: pointer;
+                position: relative;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            &_item:hover,
+            &_item.active {
+                background-color: rgba($color: $primary-color, $alpha: 0.1);
+                border-radius: 5px;
+            }
+            &_item.active {
+                background-color: rgba($color: $primary-color, $alpha: 1);
+                border-radius: 5px;
+                color: white;
+
+                .SideBar_content_list_icon {
+                    color: white;
+                }
+                .SideBar_content_list_item_text {
+                    color: white;
+                }
+            }
+            &_item.active {
+                color: $primary-color;
+            }
+            &_item:hover::after,
+            &_item.active::after {
+                content: '';
+                background-color: $primary-color;
+                height: 100%;
+                width: 2px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none; //
+            }
+            &_icon {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &_footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0.7rem 0.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $primary-font;
+    }
+
+    // &_footer:hover {
+    //     cursor: pointer;
+    //     background-color: rgba($color: $primary-color, $alpha: 0.1);
+    //     color: $primary-color;
+    // }
+}
