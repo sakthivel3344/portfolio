@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./mainLayout.module.scss";
 import SideBar from "@/components/sideBar/sideBar";
+import NavBar from "@/components/navBar";
 
 const MainLayout = ({ children }) => {
 
@@ -9,7 +10,10 @@ const MainLayout = ({ children }) => {
       <div className={styles.MainLayout_side_bar_wrapper}>
         <SideBar />
       </div>
-      <div className={styles.MainLayout_content_wrapper}>{children}</div>
+      <div className={styles.MainLayout_content_wrapper}>
+        <NavBar />
+        {children}
+      </div>
     </div>
   );
 };

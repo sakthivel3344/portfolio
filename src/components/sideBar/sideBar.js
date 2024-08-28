@@ -4,13 +4,18 @@ import Image from "next/image";
 import profileImg from "@/assets/images/sidebar/demo_profile_img.png";
 import { sidebarItemList } from "@/constants/sidebar";
 import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { updateCurrentPage } from "@/redux/slices/sideBar";
 
 const SideBar = () => {
-  const [pathName, setPathName] = useState("/");
+  const [pathName, setPathName] = useState("");
   const router = useRouter();
+  // const sideBarState = useSelector((state) => state.sidebar);
+  const dispatch = useDispatch();
 
-  const handleClick = (path) => {
-    router.push(path);
+  const handleClick = (data) => {
+    dispatch(updateCurrentPage(data.displayName));
+    router.push(data.path);
   };
 
   useEffect(() => {
@@ -43,7 +48,7 @@ const SideBar = () => {
                 className={`${styles.SideBar_content_list_item} ${
                   pathName === data.path ? styles.active : ""
                 }`}
-                onClick={() => handleClick(data.path)}
+                onClick={() => handleClick(data)}
                 key={data.id}
               >
                 {data?.icon && (
@@ -51,7 +56,9 @@ const SideBar = () => {
                     customClassName={styles.SideBar_content_list_icon}
                   />
                 )}
-                <p className={styles.SideBar_content_list_item_text}>{data.displayName}</p>
+                <p className={styles.SideBar_content_list_item_text}>
+                  {data.displayName}
+                </p>
               </li>
             );
           })}

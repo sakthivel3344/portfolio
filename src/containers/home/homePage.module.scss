@@ -1,0 +1,48 @@
+@import "../../styles/index.scss";
+
+.Home {
+  height: 200vh;
+
+  &_home_section {
+    height: calc(100vh - 3.2rem);
+    // background-image: linear-gradient(
+    //     rgba(4, 9, 30, 0.374),
+    //     rgba(4, 9, 30, 0.361)
+    //   ),
+    //   url(../../assets/images/homePage/home-bg.jpg);
+
+    // background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_content {
+      display: flex;
+      align-items: center;
+      width: 70%;
+      justify-content: space-between;
+      padding-bottom: 5rem;
+      &_one {
+        font-family: $primary-font;
+        .title_1 {
+          font-size: 3rem;
+          font-weight: bold;
+        }
+        .title_1:nth-child(1) {
+          margin-bottom: 0.5rem;
+        }
+        .title_1:nth-child(2) {
+          margin-bottom: 0.5rem;
+        }
+        .title_2 {
+          font-size: 1.4rem;
+        }
+      }
+      &_two {
+        width: 15rem;
+        height: 20rem;
+        border: 1px solid white;
+      }
+    }
+  }
+}

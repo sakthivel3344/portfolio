@@ -1,0 +1,23 @@
+@import "../../styles/index.scss";
+
+.NavBar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--body-background-color);
+    font-family: $primary-font;
+    z-index: 0;
+    // box-shadow: var(--nav-bar-box-shadow);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    &_left_content {
+
+    }
+    &_right_content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}

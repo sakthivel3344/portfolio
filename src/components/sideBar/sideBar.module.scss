@@ -6,19 +6,19 @@
     position: relative;
     // background-color: rgba($color: $primary-color, $alpha: 0.1);
     padding: 0 1rem;
-
+    // visibility: hidden; //temp
     &_header {
         width: 100%;
         display: flex;
         height: fit-content;
         align-items: center;
         padding: 1rem 0;
-        gap: 0.5rem;
+        gap: 1rem;
         &_content {
             display: flex;
             flex-direction: column;
             font-family: $primary-font;
-            gap: 0.3rem;
+            gap: 0.5rem;
         }
     }
     .profile_img {
@@ -49,11 +49,13 @@
             }
             &_item:hover,
             &_item.active {
-                background-color: rgba($color: $primary-color, $alpha: 0.1);
+                background-color: rgba($color: $primary-color, $alpha: 0.2);
                 border-radius: 5px;
             }
             &_item.active {
-                background-color: rgba($color: $primary-color, $alpha: 1);
+                // background-color: rgba($color: $primary-color, $alpha: 1);
+                // background-color: $primary-gradient;
+                background: $primary-gradient;
                 border-radius: 5px;
                 color: white;
 

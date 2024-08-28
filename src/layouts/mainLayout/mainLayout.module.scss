@@ -5,9 +5,11 @@
 
     &_side_bar_wrapper {
         height: 100vh;
-        min-width: 15rem;
-        max-width: 15rem;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        min-width: 16rem;
+        max-width: 16rem;
+        // box-shadow: var(--side-bar-box-shadow);
+        border-right: 1px solid rgba(128, 128, 128, 0.2);
+        z-index: 1;
     }
     &_content_wrapper {
         height: 100vh;

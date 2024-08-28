@@ -1,8 +1,10 @@
 import MainLayout from "@/layouts/mainLayout/mainLayout";
-import styles from "./index.module.scss";
+import HomePage from "@/containers/home/homePage";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <HomePage/>
+  );
 };
 
 Home.getLayout = function getLayout(page) {
