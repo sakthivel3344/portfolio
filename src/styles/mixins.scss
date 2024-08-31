@@ -1,7 +1,10 @@
+@import "./variables.scss";
+
 @mixin heading1 {
 
 }
 
 @mixin para1 {
     font-size: 1rem;
+    font-family: $secondary-font;
 }

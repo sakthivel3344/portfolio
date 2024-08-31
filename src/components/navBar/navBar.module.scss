@@ -8,7 +8,8 @@
     align-items: center;
     padding: 1rem;
     background-color: var(--body-background-color);
-    font-family: $primary-font;
+    // font-family: $primary-font;
+    @include para1;
     z-index: 0;
     // box-shadow: var(--nav-bar-box-shadow);
     border-bottom: 1px solid rgba(128, 128, 128, 0.2);
